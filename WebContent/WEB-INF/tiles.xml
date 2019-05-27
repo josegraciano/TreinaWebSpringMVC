@@ -37,4 +37,14 @@
 		<put-attribute name="title" value="TreinaWeb Spring MVC: Alteração de Músicas"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/musicas/alterar.jsp"></put-attribute>
 	</definition>
+
+	<!-- ** Usuários ** -->
+	<definition name="usuario.adicionar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="TreinaWeb Spring MVC: Adição de Usuário"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/usuarios/adicionar.jsp"></put-attribute>
+	</definition>
+	<definition name="usuario.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="TreinaWeb Spring MVC: Exibição de Usuários"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/usuarios/listar.jsp"></put-attribute>
+	</definition>
 </tiles-definitions>

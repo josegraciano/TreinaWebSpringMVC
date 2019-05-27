@@ -18,6 +18,8 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 //classe POJO (padrão Java Beans)
 @Entity
 @Table(name = "alb_albuns")
@@ -42,6 +44,7 @@ public class Album {
 
 	//Cascateamento por MERGE reflete as alterações da classe pai nas filhas
 	//orphanRemoval pretime a exclusão de linhas sem referência nas classes filhas
+	@JsonBackReference
 	@OneToMany(mappedBy = "album", fetch = FetchType.EAGER, cascade = CascadeType.MERGE, orphanRemoval = true)
 	private Set<Musica> musicas;
 
